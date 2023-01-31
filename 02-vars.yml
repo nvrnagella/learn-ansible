@@ -2,8 +2,8 @@
   hosts: all
   connection: local
   vars:
-    ABC: play.example.com
+    URL: play.example.com
   tasks:
     - name: Access a variable
       ansible.builtin.debug:
-        msg: URL == {{ABC}}
+        msg: URL == {{URL}}
