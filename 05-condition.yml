@@ -1,0 +1,7 @@
+- name: demo on condition
+  hosts: all
+  tasks:
+    - name: String conditions
+      ansible.builtin.debug:
+        msg: fruit name is apple
+      when: fruit_name == "apple"
