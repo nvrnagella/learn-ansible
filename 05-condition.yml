@@ -1,7 +1,20 @@
 - name: demo on condition
   hosts: all
+  vars:
+    a: 100
+    b: true
   tasks:
     - name: String conditions
       ansible.builtin.debug:
         msg: fruit name is apple
       when: fruit_name == "apple"
+
+    - name: numerical conditions
+      ansible.builtin.debug:
+        msg: a is greater then 10
+      when: a > 10
+
+    - name: boolean conditions
+      ansible.builtin.debug:
+        msg: b is true
+      when: b
